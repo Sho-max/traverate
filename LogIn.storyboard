@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ziN-1m-vOk">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="c9A-G2-7bm">
+            <objects>
+                <viewController storyboardIdentifier="RootNavigationController" id="gjh-19-PdE" customClass="LogInViewController" customModule="Traverate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbH-ZE-KPP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zT-Cl-5d3">
+                                <rect key="frame" x="45" y="144" width="285" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKo-8J-PzN">
+                                <rect key="frame" x="139" y="617" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GKo-8J-PzN" secondAttribute="height" multiplier="16:5" id="CRx-pk-xIY"/>
+                                </constraints>
+                                <state key="normal" title="新規会員登録">
+                                    <color key="titleColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ptu-78-9mb" kind="modal" id="AhI-a1-ir9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="46p-lG-6lH" firstAttribute="bottom" secondItem="GKo-8J-PzN" secondAttribute="bottom" constant="20" id="QeB-Kw-UzG"/>
+                            <constraint firstItem="46p-lG-6lH" firstAttribute="trailing" secondItem="GKo-8J-PzN" secondAttribute="trailing" constant="140" id="WzB-vd-TH7"/>
+                            <constraint firstItem="46p-lG-6lH" firstAttribute="trailing" secondItem="5zT-Cl-5d3" secondAttribute="trailing" constant="45" id="Zl9-Bm-yFW"/>
+                            <constraint firstItem="GKo-8J-PzN" firstAttribute="leading" secondItem="46p-lG-6lH" secondAttribute="leading" constant="139" id="bNX-kL-ZrC"/>
+                            <constraint firstItem="5zT-Cl-5d3" firstAttribute="top" secondItem="46p-lG-6lH" secondAttribute="top" constant="100" id="fhw-ee-MP8"/>
+                            <constraint firstItem="5zT-Cl-5d3" firstAttribute="leading" secondItem="46p-lG-6lH" secondAttribute="leading" constant="45" id="wMB-3g-5D5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="46p-lG-6lH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RJf-ps-tVu"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="5zT-Cl-5d3" id="JVW-gu-MhG"/>
+                        <segue destination="0iK-CG-d9d" kind="modal" identifier="toSignIn" id="UeP-Uf-NnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8m-zO-QBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.39999999999998" y="123.68815592203899"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="gkz-bS-372">
+            <objects>
+                <viewController id="fCv-L0-bOt" customClass="SignUpViewController" customModule="Traverate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DBS-ht-1Hv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyY-aD-h41">
+                                <rect key="frame" x="68" y="159" width="239" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNw-SV-TVL">
+                                <rect key="frame" x="70" y="342" width="235" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register" destination="fCv-L0-bOt" eventType="touchUpInside" id="OGV-Ag-imx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス（確認用）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7l-Kt-gay">
+                                <rect key="frame" x="68" y="223" width="239" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-aj-H30">
+                                <rect key="frame" x="80" y="296" width="215" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0H-KI-IdG">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="利用規約"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="と" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JN-Mo-QJp">
+                                        <rect key="frame" x="48.5" y="0.0" width="10.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82A-9p-joC">
+                                        <rect key="frame" x="65" y="0.0" width="103" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="r1J-FX-WnR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="プライバシーポリシー"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="に関して" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSt-Ba-F1n">
+                                        <rect key="frame" x="174" y="0.0" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G29-7b-tDq" firstAttribute="trailing" secondItem="UyY-aD-h41" secondAttribute="trailing" constant="68" id="1E4-zX-WvA"/>
+                            <constraint firstItem="g7l-Kt-gay" firstAttribute="leading" secondItem="G29-7b-tDq" secondAttribute="leading" constant="68" id="4OP-Oj-QJx"/>
+                            <constraint firstItem="g7l-Kt-gay" firstAttribute="top" secondItem="UyY-aD-h41" secondAttribute="bottom" constant="30" id="7BI-aK-AQn"/>
+                            <constraint firstItem="UyY-aD-h41" firstAttribute="top" secondItem="G29-7b-tDq" secondAttribute="top" constant="103" id="8WS-z1-Vz5"/>
+                            <constraint firstItem="G29-7b-tDq" firstAttribute="trailing" secondItem="g7l-Kt-gay" secondAttribute="trailing" constant="68" id="Fhb-zU-7A1"/>
+                            <constraint firstItem="pLF-aj-H30" firstAttribute="top" secondItem="g7l-Kt-gay" secondAttribute="bottom" constant="39" id="RHy-9H-06M"/>
+                            <constraint firstItem="pLF-aj-H30" firstAttribute="leading" secondItem="G29-7b-tDq" secondAttribute="leading" constant="80" id="VjC-6D-X7D"/>
+                            <constraint firstItem="G29-7b-tDq" firstAttribute="trailing" secondItem="sNw-SV-TVL" secondAttribute="trailing" constant="70" id="W9q-Ti-2QD"/>
+                            <constraint firstItem="sNw-SV-TVL" firstAttribute="top" secondItem="pLF-aj-H30" secondAttribute="bottom" constant="22" id="g2T-qC-L2R"/>
+                            <constraint firstItem="G29-7b-tDq" firstAttribute="trailing" secondItem="pLF-aj-H30" secondAttribute="trailing" constant="80" id="tNN-1j-Pg4"/>
+                            <constraint firstItem="sNw-SV-TVL" firstAttribute="leading" secondItem="G29-7b-tDq" secondAttribute="leading" constant="70" id="vMS-vY-MtI"/>
+                            <constraint firstItem="UyY-aD-h41" firstAttribute="leading" secondItem="G29-7b-tDq" secondAttribute="leading" constant="68" id="yKT-Zm-4hK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G29-7b-tDq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lDi-lj-b1z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oIK-bP-N4a">
+                            <connections>
+                                <action selector="back" destination="fCv-L0-bOt" id="aKo-qh-RUq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="oIK-bP-N4a" id="PMZ-AC-FxZ"/>
+                        <outlet property="confirmationEmailAddress" destination="g7l-Kt-gay" id="sVx-b2-CGE"/>
+                        <outlet property="emailTextBox" destination="UyY-aD-h41" id="njd-wp-NRW"/>
+                        <outlet property="signUp" destination="sNw-SV-TVL" id="t3w-0C-eGX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Do5-OX-mOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679.1999999999998" y="509.59520239880067"/>
+        </scene>
+        <!--利用規約-->
+        <scene sceneID="ML0-c0-nsm">
+            <objects>
+                <viewController id="3mm-eX-tHc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xB1-KJ-TQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W0J-2O-j3L">
+                                <rect key="frame" x="16" y="45" width="343" height="606"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">石井翔（以下，「開発者」といいます。）は，本アプリ上で提供するサービス（以下,「本サービス」といいます。）におけるプライバシー情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+
+第1条（プライバシー情報）
+
+プライバシー情報のうち「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報を指します。
+プライバシー情報のうち「履歴情報および特性情報」とは，上記に定める「個人情報」以外のものをいい，ご利用いただいたサービスやご購入いただいた商品，ご覧になったページや広告の履歴，ユーザーが検索された検索キーワード，ご利用日時，ご利用の方法，ご利用環境，郵便番号や性別，職業，年齢，ユーザーのIPアドレス，クッキー情報，位置情報，端末の個体識別情報などを指します。
+第２条（プライバシー情報の収集方法）
+
+開発者は，ユーザーが利用登録をする際に氏名，生年月日，住所，電話番号，メールアドレス，銀行口座番号，クレジットカード番号，運転免許証番号などの個人情報をお尋ねすることがあります。また，ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や，決済に関する情報を開発者の提携先（情報提供元，広告主，広告配信先などを含みます。以下，｢提携先｣といいます。）などから収集することがあります。
+開発者は，ユーザーについて，利用したサービスやソフトウエア，購入した商品，閲覧したページや広告の履歴，検索した検索キーワード，利用日時，利用方法，利用環境（携帯端末を通じてご利用の場合の当該端末の通信状態，利用に際しての各種設定情報なども含みます），IPアドレス，クッキー情報，位置情報，端末の個体識別情報などの履歴情報および特性情報を，ユーザーが開発者や提携先のサービスを利用しまたはページを閲覧する際に収集します。
+第３条（個人情報を収集・利用する目的）
+
+開発者が個人情報を収集・利用する目的は，以下のとおりです。
+
+（1）ユーザーに自分の登録情報の閲覧や修正，利用状況の閲覧を行っていただくために，氏名，住所，連絡先，支払方法などの登録情報，利用されたサービスや購入された商品，およびそれらの代金などに関する情報を表示する目的
+（2）ユーザーにお知らせや連絡をするためにメールアドレスを利用する場合やユーザーに商品を送付したり必要に応じて連絡したりするため，氏名や住所などの連絡先情報を利用する目的
+（3）ユーザーの本人確認を行うために，氏名，生年月日，住所，電話番号，銀行口座番号，クレジットカード番号，運転免許証番号，配達証明付き郵便の到達結果などの情報を利用する目的
+（4）ユーザーに代金を請求するために，購入された商品名や数量，利用されたサービスの種類や期間，回数，請求金額，氏名，住所，銀行口座番号やクレジットカード番号などの支払に関する情報などを利用する目的
+（5）ユーザーが簡便にデータを入力できるようにするために，開発者に登録されている情報を入力画面に表示させたり，ユーザーのご指示に基づいて他のサービスなど（提携先が提供するものも含みます）に転送したりする目的
+（6）代金の支払を遅滞したり第三者に損害を発生させたりするなど，本サービスの利用規約に違反したユーザーや，不正・不当な目的でサービスを利用しようとするユーザーの利用をお断りするために，利用態様，氏名や住所など個人を特定するための情報を利用する目的
+（7）ユーザーからのお問い合わせに対応するために，お問い合わせ内容や代金の請求に関する情報など開発者がユーザーに対してサービスを提供するにあたって必要となる情報や，ユーザーのサービス利用状況，連絡先情報などを利用する目的
+（8）上記の利用目的に付随する目的
+第４条（個人情報の第三者提供）
+
+開発者は，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，第三者に個人情報を提供することはありません。ただし，個人情報保護法その他の法令で認められる場合を除きます。
+（1）法令に基づく場合
+（2）人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき
+（3）公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき
+（4）国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき
+（5）予め次の事項を告知あるいは公表をしている場合
+利用目的に第三者への提供を含むこと
+第三者に提供されるデータの項目
+第三者への提供の手段または方法
+本人の求めに応じて個人情報の第三者への提供を停止すること
+前項の定めにかかわらず，次に掲げる場合は第三者には該当しないものとします。
+（1）開発者が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合
+（2）合併その他の事由による事業の承継に伴って個人情報が提供される場合
+（3）個人情報を特定の者との間で共同して利用する場合であって，その旨並びに共同して利用される個人情報の項目，共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，あらかじめ本人に通知し，または本人が容易に知り得る状態に置いているとき
+第５条（個人情報の開示）
+
+開発者は，本人から個人情報の開示を求められたときは，本人に対し，遅滞なくこれを開示します。ただし，開示することにより次のいずれかに該当する場合は，その全部または一部を開示しないこともあり，開示しない決定をした場合には，その旨を遅滞なく通知します。なお，個人情報の開示に際しては，１件あたり１，０００円の手数料を申し受けます。
+（1）本人または第三者の生命，身体，財産その他の権利利益を害するおそれがある場合
+（2）開発者の業務の適正な実施に著しい支障を及ぼすおそれがある場合
+（3）その他法令に違反することとなる場合
+前項の定めにかかわらず，履歴情報および特性情報などの個人情報以外の情報については，原則として開示いたしません。
+第６条（個人情報の訂正および削除）
+
+ユーザーは，開発者の保有する自己の個人情報が誤った情報である場合には，開発者が定める手続きにより，開発者に対して個人情報の訂正または削除を請求することができます。
+開発者は，ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正または削除を行い，これをユーザーに通知します。
+第７条（個人情報の利用停止等）
+
+開発者は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行い，その結果に基づき，個人情報の利用停止等を行い，その旨本人に通知します。ただし，個人情報の利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって，本人の権利利益を保護するために必要なこれに代わるべき措置をとれる場合は，この代替策を講じます。
+
+第８条（プライバシーポリシーの変更）
+
+本ポリシーの内容は，ユーザーに通知することなく，変更することができるものとします。
+開発者が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W0J-2O-j3L" firstAttribute="top" secondItem="T3o-dc-hNK" secondAttribute="top" constant="45" id="8pt-bt-Si2"/>
+                            <constraint firstItem="T3o-dc-hNK" firstAttribute="trailing" secondItem="W0J-2O-j3L" secondAttribute="trailing" constant="16" id="MeP-pj-mQE"/>
+                            <constraint firstItem="W0J-2O-j3L" firstAttribute="leading" secondItem="T3o-dc-hNK" secondAttribute="leading" constant="16" id="PZE-rK-7S0"/>
+                            <constraint firstItem="T3o-dc-hNK" firstAttribute="bottom" secondItem="W0J-2O-j3L" secondAttribute="bottom" constant="16" id="f8C-gZ-VuC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T3o-dc-hNK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="利用規約" id="OC3-RS-NPO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S33-g8-ISz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3666" y="1181"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="jTZ-4Y-DoC">
+            <objects>
+                <viewController id="uin-o5-Qif" customClass="SignInViewController" customModule="Traverate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XIv-T7-GtH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owR-lz-OoF">
+                                <rect key="frame" x="65" y="243.5" width="245" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VK7-Rq-zcX">
+                                <rect key="frame" x="65" y="317.5" width="245" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSJ-m4-EBF">
+                                <rect key="frame" x="65" y="440.5" width="245" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register" destination="fCv-L0-bOt" eventType="touchUpInside" id="qfk-d4-j1u"/>
+                                    <action selector="signIn" destination="uin-o5-Qif" eventType="touchUpInside" id="b2c-ps-TPY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントをお持ちではない方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYD-BT-oVG">
+                                <rect key="frame" x="85" y="511" width="206" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="256.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-v0-JRV">
+                                <rect key="frame" x="80" y="86" width="215" height="114.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZJ3-v0-JRV" secondAttribute="height" multiplier="15:8" id="Cxx-68-bvT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-x7-u3g">
+                                <rect key="frame" x="145" y="561" width="85" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="新規会員登録"/>
+                                <connections>
+                                    <segue destination="fCv-L0-bOt" kind="push" identifier="toNew" id="7lO-PV-jQ0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPA-SP-Y2e">
+                                <rect key="frame" x="116" y="391" width="144" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="パスワードを忘れた方はこちら"/>
+                                <connections>
+                                    <segue destination="AhU-gx-XZy" kind="push" id="veB-cP-o0h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TSJ-m4-EBF" firstAttribute="top" secondItem="OPA-SP-Y2e" secondAttribute="bottom" constant="25.5" id="1je-BQ-sSq"/>
+                            <constraint firstItem="VK7-Rq-zcX" firstAttribute="top" secondItem="owR-lz-OoF" secondAttribute="bottom" constant="40" id="4Qk-hJ-qUV"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="ZJ3-v0-JRV" secondAttribute="trailing" constant="80" id="4z6-rD-MUu"/>
+                            <constraint firstItem="ZJ3-v0-JRV" firstAttribute="top" secondItem="HRb-3u-GJn" secondAttribute="top" constant="30" id="Ekb-i7-WfU"/>
+                            <constraint firstItem="OPA-SP-Y2e" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="116" id="KhE-bt-0FL"/>
+                            <constraint firstItem="TSJ-m4-EBF" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="65" id="PZp-XW-m9W"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="owR-lz-OoF" secondAttribute="trailing" constant="65" id="SCs-CS-O5V"/>
+                            <constraint firstItem="ZJ3-v0-JRV" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="80" id="XlL-Kf-dk7"/>
+                            <constraint firstItem="zDb-x7-u3g" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="145" id="cIW-nw-xOI"/>
+                            <constraint firstItem="owR-lz-OoF" firstAttribute="top" secondItem="ZJ3-v0-JRV" secondAttribute="bottom" constant="43" id="cg7-oT-6Zq"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="VK7-Rq-zcX" secondAttribute="trailing" constant="65" id="dHl-xQ-kWB"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="TSJ-m4-EBF" secondAttribute="trailing" constant="65" id="e8u-Ay-85o"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="OPA-SP-Y2e" secondAttribute="trailing" constant="115" id="ekT-La-pPC"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="zDb-x7-u3g" secondAttribute="trailing" constant="145" id="fpR-zd-LDr"/>
+                            <constraint firstItem="RYD-BT-oVG" firstAttribute="top" secondItem="TSJ-m4-EBF" secondAttribute="bottom" constant="25.5" id="i89-6L-dro"/>
+                            <constraint firstItem="zDb-x7-u3g" firstAttribute="top" secondItem="RYD-BT-oVG" secondAttribute="bottom" constant="38" id="kAr-AR-SKy"/>
+                            <constraint firstItem="RYD-BT-oVG" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="85" id="nHZ-0a-IKe"/>
+                            <constraint firstItem="OPA-SP-Y2e" firstAttribute="top" secondItem="VK7-Rq-zcX" secondAttribute="bottom" constant="39.5" id="oSf-vt-3Jq"/>
+                            <constraint firstItem="HRb-3u-GJn" firstAttribute="trailing" secondItem="RYD-BT-oVG" secondAttribute="trailing" constant="84" id="odf-5I-f4U"/>
+                            <constraint firstItem="owR-lz-OoF" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="65" id="qD3-Kt-T95"/>
+                            <constraint firstItem="TSJ-m4-EBF" firstAttribute="top" secondItem="VK7-Rq-zcX" secondAttribute="bottom" constant="89" id="s7D-p0-PgT"/>
+                            <constraint firstItem="VK7-Rq-zcX" firstAttribute="leading" secondItem="HRb-3u-GJn" secondAttribute="leading" constant="65" id="yES-RA-LO6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HRb-3u-GJn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M6Q-5u-aCt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hal-7O-NLQ">
+                            <connections>
+                                <action selector="cancel" destination="uin-o5-Qif" id="Eo2-7D-Jf1"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="hal-7O-NLQ" id="aZx-oC-HTI"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="hal-7O-NLQ" id="gVZ-MR-f2r"/>
+                        <outlet property="forgetPassword" destination="OPA-SP-Y2e" id="Ibz-sc-53Q"/>
+                        <outlet property="password" destination="VK7-Rq-zcX" id="ePe-NY-YAN"/>
+                        <outlet property="signInButton" destination="TSJ-m4-EBF" id="fmg-Rk-yNQ"/>
+                        <outlet property="userIdBox" destination="owR-lz-OoF" id="rfC-bh-bnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u1h-Qw-Ico" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679.1999999999998" y="-180.35982008995504"/>
+        </scene>
+        <!--Resend Password View Controller-->
+        <scene sceneID="D5Q-Uh-MTz">
+            <objects>
+                <viewController id="AhU-gx-XZy" customClass="ResendPasswordViewController" customModule="Traverate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HDH-DA-fUi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGR-ez-6HQ">
+                                <rect key="frame" x="68" y="158" width="239" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-WR-84T">
+                                <rect key="frame" x="70" y="347" width="235" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="register" destination="fCv-L0-bOt" eventType="touchUpInside" id="mXE-dp-plH"/>
+                                    <action selector="resendMail:" destination="AhU-gx-XZy" eventType="touchUpInside" id="jfx-PG-0j5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス（確認用）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaB-Dj-961">
+                                <rect key="frame" x="68" y="211" width="239" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kGR-ez-6HQ" firstAttribute="top" secondItem="T4u-D3-HxB" secondAttribute="top" constant="102" id="0Kv-Ln-Zi4"/>
+                            <constraint firstItem="T4u-D3-HxB" firstAttribute="trailing" secondItem="CGl-WR-84T" secondAttribute="trailing" constant="70" id="6R3-1b-LBz"/>
+                            <constraint firstItem="kGR-ez-6HQ" firstAttribute="leading" secondItem="T4u-D3-HxB" secondAttribute="leading" constant="68" id="B1X-py-YMP"/>
+                            <constraint firstItem="T4u-D3-HxB" firstAttribute="trailing" secondItem="kGR-ez-6HQ" secondAttribute="trailing" constant="68" id="Glv-h1-2fK"/>
+                            <constraint firstItem="KaB-Dj-961" firstAttribute="leading" secondItem="T4u-D3-HxB" secondAttribute="leading" constant="68" id="Kvh-3l-J8K"/>
+                            <constraint firstItem="KaB-Dj-961" firstAttribute="top" secondItem="kGR-ez-6HQ" secondAttribute="bottom" constant="19" id="RS5-UZ-Bwg"/>
+                            <constraint firstItem="CGl-WR-84T" firstAttribute="top" secondItem="KaB-Dj-961" secondAttribute="bottom" constant="102" id="gTy-gW-kGM"/>
+                            <constraint firstItem="CGl-WR-84T" firstAttribute="leading" secondItem="T4u-D3-HxB" secondAttribute="leading" constant="70" id="hI7-KP-gAw"/>
+                            <constraint firstItem="T4u-D3-HxB" firstAttribute="trailing" secondItem="KaB-Dj-961" secondAttribute="trailing" constant="68" id="hiM-XR-JbD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T4u-D3-HxB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dbC-bw-lLE"/>
+                    <connections>
+                        <outlet property="confirmationEmailAddress" destination="KaB-Dj-961" id="nZe-kg-d0L"/>
+                        <outlet property="mailAddress" destination="kGR-ez-6HQ" id="NAw-CS-ioF"/>
+                        <outlet property="sendButton" destination="CGl-WR-84T" id="dyX-CL-If8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ax-yb-Uk2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3624.8000000000002" y="-180.35982008995504"/>
+        </scene>
+        <!--プライバシーポリシー-->
+        <scene sceneID="xBg-b2-hEH">
+            <objects>
+                <viewController id="CDO-9X-ryn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KHq-xH-hDl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yHo-AV-hHZ">
+                                <rect key="frame" x="16" y="45" width="343" height="606"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">プライバシーポリシー
+YoungLab, Inc.（以下，「当社」といいます。）は，本アプリ、ウェブサイト上で提供するサービス（以下,「本サービス」といいます。）におけるプライバシー情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
+
+第1条（プライバシー情報）
+プライバシー情報のうち「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報を指します。
+プライバシー情報のうち「履歴情報および特性情報」とは，上記に定める「個人情報」以外のものをいい，ご利用いただいたサービスやご購入いただいた商品，ご覧になったページや広告の履歴，ユーザーが検索された検索キーワード，ご利用日時，ご利用の方法，ご利用環境，郵便番号や性別，職業，年齢，ユーザーのIPアドレス，クッキー情報，位置情報，端末の個体識別情報などを指します。
+
+第２条（プライバシー情報の収集方法）
+当社は，ユーザーが利用登録をする際に氏名，生年月日，住所，電話番号，メールアドレス，銀行口座番号，クレジットカード番号，運転免許証番号などの個人情報をお尋ねすることがあります。また，ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や，決済に関する情報を当社の提携先（情報提供元，広告主，広告配信先などを含みます。以下，｢提携先｣といいます。）などから収集することがあります。
+当社は，ユーザーについて，利用したサービスやソフトウエア，購入した商品，閲覧したページや広告の履歴，検索した検索キーワード，利用日時，利用方法，利用環境（携帯端末を通じてご利用の場合の当該端末の通信状態，利用に際しての各種設定情報なども含みます），IPアドレス，クッキー情報，位置情報，端末の個体識別情報などの履歴情報および特性情報を，ユーザーが当社や提携先のサービスを利用しまたはページを閲覧する際に収集します。
+
+第３条（個人情報を収集・利用する目的）
+当社が個人情報を収集・利用する目的は，以下のとおりです。
+
+（1）ユーザーに自分の登録情報の閲覧や修正，利用状況の閲覧を行っていただくために，氏名，住所，連絡先，支払方法などの登録情報，利用されたサービスや購入された商品，およびそれらの代金などに関する情報を表示する目的
+（2）ユーザーにお知らせや連絡をするためにメールアドレスを利用する場合やユーザーに商品を送付したり必要に応じて連絡したりするため，氏名や住所などの連絡先情報を利用する目的
+（3）ユーザーの本人確認を行うために，氏名，生年月日，住所，電話番号，銀行口座番号，クレジットカード番号，運転免許証番号，配達証明付き郵便の到達結果などの情報を利用する目的
+（4）ユーザーに代金を請求するために，購入された商品名や数量，利用されたサービスの種類や期間，回数，請求金額，氏名，住所，銀行口座番号やクレジットカード番号などの支払に関する情報などを利用する目的
+（5）ユーザーが簡便にデータを入力できるようにするために，当社に登録されている情報を入力画面に表示させたり，ユーザーのご指示に基づいて他のサービスなど（提携先が提供するものも含みます）に転送したりする目的
+（6）代金の支払を遅滞したり第三者に損害を発生させたりするなど，本サービスの利用規約に違反したユーザーや，不正・不当な目的でサービスを利用しようとするユーザーの利用をお断りするために，利用態様，氏名や住所など個人を特定するための情報を利用する目的
+（7）ユーザーからのお問い合わせに対応するために，お問い合わせ内容や代金の請求に関する情報など当社がユーザーに対してサービスを提供するにあたって必要となる情報や，ユーザーのサービス利用状況，連絡先情報などを利用する目的
+（8）上記の利用目的に付随する目的
+
+第４条（個人情報の第三者提供）
+当社は，次に掲げる場合を除いて，あらかじめユーザーの同意を得ることなく，第三者に個人情報を提供することはありません。ただし，個人情報保護法その他の法令で認められる場合を除きます。
+（1）法令に基づく場合
+（2）人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき
+（3）公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき
+（4）国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき
+（5）予め次の事項を告知あるいは公表をしている場合
+利用目的に第三者への提供を含むこと
+第三者に提供されるデータの項目
+第三者への提供の手段または方法
+本人の求めに応じて個人情報の第三者への提供を停止すること
+前項の定めにかかわらず，次に掲げる場合は第三者には該当しないものとします。
+（1）当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合
+（2）合併その他の事由による事業の承継に伴って個人情報が提供される場合
+（3）個人情報を特定の者との間で共同して利用する場合であって，その旨並びに共同して利用される個人情報の項目，共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，あらかじめ本人に通知し，または本人が容易に知り得る状態に置いているとき
+
+第５条（個人情報の開示）
+当社は，本人から個人情報の開示を求められたときは，本人に対し，遅滞なくこれを開示します。ただし，開示することにより次のいずれかに該当する場合は，その全部または一部を開示しないこともあり，開示しない決定をした場合には，その旨を遅滞なく通知します。なお，個人情報の開示に際しては，１件あたり１，０００円の手数料を申し受けます。
+（1）本人または第三者の生命，身体，財産その他の権利利益を害するおそれがある場合
+（2）当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合
+（3）その他法令に違反することとなる場合
+前項の定めにかかわらず，履歴情報および特性情報などの個人情報以外の情報については，原則として開示いたしません。
+
+第６条（個人情報の訂正および削除）
+ユーザーは，当社の保有する自己の個人情報が誤った情報である場合には，当社が定める手続きにより，当社に対して個人情報の訂正または削除を請求することができます。
+当社は，ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正または削除を行い，これをユーザーに通知します。
+
+第７条（個人情報の利用停止等）
+当社は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行い，その結果に基づき，個人情報の利用停止等を行い，その旨本人に通知します。ただし，個人情報の利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって，本人の権利利益を保護するために必要なこれに代わるべき措置をとれる場合は，この代替策を講じます。
+
+第８条（プライバシーポリシーの変更）
+本ポリシーの内容は，ユーザーに通知することなく，変更することができるものとします。
+当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。
+
+以上</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yg7-rY-5TA" firstAttribute="trailing" secondItem="yHo-AV-hHZ" secondAttribute="trailing" constant="16" id="ZiT-7r-7Ki"/>
+                            <constraint firstItem="yHo-AV-hHZ" firstAttribute="leading" secondItem="Yg7-rY-5TA" secondAttribute="leading" constant="16" id="fpZ-ak-QcY"/>
+                            <constraint firstItem="Yg7-rY-5TA" firstAttribute="bottom" secondItem="yHo-AV-hHZ" secondAttribute="bottom" constant="16" id="qVV-yh-TpQ"/>
+                            <constraint firstItem="yHo-AV-hHZ" firstAttribute="top" secondItem="KHq-xH-hDl" secondAttribute="topMargin" constant="45" id="rDr-Lq-s2R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yg7-rY-5TA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="プライバシーポリシー" id="ZlW-nk-z7A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2t-1e-ziJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3666" y="510"/>
+        </scene>
+        <!--Custom Navigation View Controller-->
+        <scene sceneID="o1b-Xz-cb7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ziN-1m-vOk" customClass="CustomNavigationViewController" customModule="Traverate" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KqA-4y-yXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gjh-19-PdE" kind="relationship" relationship="rootViewController" id="1Ne-zO-xwi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFN-9M-PYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="124.55357142857142"/>
+        </scene>
+        <!--signInViewController-->
+        <scene sceneID="y8c-rq-1aC">
+            <objects>
+                <navigationController storyboardIdentifier="signInViewController" title="signInViewController" automaticallyAdjustsScrollViewInsets="NO" id="0iK-CG-d9d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="wdZ-d2-3VZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SHU-4g-ZSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uin-o5-Qif" kind="relationship" relationship="rootViewController" id="SFm-Sv-gMm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GG2-al-IMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="-179.46428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FWz-ir-Eoq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ptu-78-9mb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ACa-hu-Lcx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ezQ-n8-LD5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fCv-L0-bOt" kind="relationship" relationship="rootViewController" id="Uen-d8-FRX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4v-RL-wWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="509.59821428571428"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7lO-PV-jQ0"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="256.jpeg" width="256" height="256"/>
+    </resources>
+</document>
